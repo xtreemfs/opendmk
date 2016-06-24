@@ -70,6 +70,37 @@
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${maven-deploy-plugin.version}</version>
+        <configuration>
+          <altDeploymentRepository>xtreemfs-opendmk-repository::default::file://${project.build.directory}/xtreemfs-opendmk-repository</altDeploymentRepository>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>${site-maven-plugin.version}</version>
+        <configuration>
+          <message>Maven artifacts for ${project.name}/${project.version}</message>
+          <noJekyll>true</noJekyll>
+          <outputDirectory>${project.build.directory}/xtreemfs-opendmk-repository</outputDirectory>
+          <repositoryName>opendmk</repositoryName>
+          <repositoryOwner>xtreemfs</repositoryOwner>
+          <merge>true</merge>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
