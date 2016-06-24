@@ -4,20 +4,20 @@
 
   <parent>
     <groupId>net.java.opendmk</groupId>
-    <artifactId>opendmk-jdmktk</artifactId>
+    <artifactId>opendmk-jmxremote_optional</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>jdmktk</artifactId>
-  <name>jdmktk</name>
+  <artifactId>jmxremote_optional</artifactId>
+  <name>jmxremote_optional</name>
 
   <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
       <groupId>net.java.opendmk</groupId>
-      <artifactId>toolkit</artifactId>
+      <artifactId>jmx_optional</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
@@ -46,17 +46,6 @@
                   </excludes>
                 </filter>
               </filters>
-              <artifactSet>
-                <excludes>
-                  <exclude>net.java.opendmk:core</exclude>
-                </excludes>
-              </artifactSet>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
-                  <resource>com/sun/jdmk/tools/mibgen/mibgen.properties</resource>
-                  <file>${basedir}/../toolkit/src/main/java/com/sun/jdmk/tools/mibgen/mibgen.properties.jdmk</file>
-                </transformer>
-              </transformers>
             </configuration>
           </execution>
         </executions>
