@@ -34,7 +34,7 @@ Moreover, this release is intended to run versions 5.0 and above of the Java SE 
 *   This release is targetted at versions 5.0 or higher of the Java SE platform. However, it can also run on the JDK 1.4.x releases, with the addition of the necessary JMX API packages listed above.
 *   If you wish to build Project OpenDMK sources, you will need either [Apache Ant](http://ant.apache.org/) version 1.6.5 or higher, or alternatively, [NetBeans IDE](http://www.netbeans.org/) version 5.5 or higher.
 
-## Building Project OpenDMK Sources and API Documentation
+## <a name="build"></a>Building Project OpenDMK Sources and API Documentation
 
 The binary bundle of OpenDMK already contains all the OpenDMK Java archive (JAR) files and the API documentation. You can, however, <a name="build">build them yourself</a> from the Project OpenDMK source bundle.
 
@@ -76,7 +76,7 @@ For more details, see the API specification of the [com.sun.jdmk.JdmkMBeanServer
 
 You can refer to the following documents:
 
-*   [Project OpenDMK API documentation](dist/docs/api/index.html "Generated API documentation") (if you have downloaded the source bundle, you may first need to generate the API documentation)
+*   [Project OpenDMK API documentation](dist/docs/api/index.html "Generated API documentation") (if you have downloaded the source bundle, you may first need to [generate the API documentation](#build))
 *   [Java DMK 5.1 documentation set](http://java.sun.com/products/jdmk/jdmk_docs.html)
 
 * * *
