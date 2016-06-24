@@ -76,7 +76,7 @@
         <artifactId>maven-deploy-plugin</artifactId>
         <version>${maven-deploy-plugin.version}</version>
         <configuration>
-          <altDeploymentRepository>xtreemfs-opendmk-repository::default::file://${basedir}/xtreemfs-opendmk-repository</altDeploymentRepository>
+          <altDeploymentRepository>xtreemfs-opendmk-repository::default::file://${project.build.directory}/xtreemfs-opendmk-repository</altDeploymentRepository>
         </configuration>
       </plugin>
 
@@ -87,7 +87,7 @@
         <configuration>
           <message>Maven artifacts for ${project.name}/${project.version}</message>
           <noJekyll>true</noJekyll>
-          <outputDirectory>${basedir}/xtreemfs-opendmk-repository</outputDirectory>
+          <outputDirectory>${project.build.directory}/xtreemfs-opendmk-repository</outputDirectory>
           <repositoryName>opendmk</repositoryName>
           <repositoryOwner>xtreemfs</repositoryOwner>
         </configuration>
