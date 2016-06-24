@@ -13,7 +13,7 @@
 [Project OpenDMK](http://opendmk.dev.java.net/) is an open source release of version 5.1 of the **[Java Dynamic Management Kit](http://java.sun.com/products/jdmk/index.jsp "Java Dynamic Management Kit Home Page") (Java DMK)**.
 
 The majority of Project OpenDMK code is being distributed under the terms of the **[license](LEGAL_NOTICES/license.txt)** present in the LEGAL_NOTICES folder. Some binary components listed on the [Project OpenDMK download page](http://opendmk.dev.java.net/download/index.html#BinaryComponents) are covered under the [Binary License for Project OpenDMK](http://opendmk.dev.java.net/legal_notices/LICENSE_BINARY.txt), and must be downloaded separetely from the [Project OpenDMK download page](http://opendmk.dev.java.net//download).  
-Note that the Full Binary Bundle also incorporates classes from the Project OpenDMK binary plug and is therefore submitted to the terms of the [Project OpenDMK binary license](http://opendmk.dev.java.net/legal_notices/LICENSE_BINARY.txt).
+Note that the Full Binary Bundle also incorporates classes from the Project OpenDMK binary plug and is therefore submitted to the terms of the [Project OpenDMK binary license](LEGAL_NOTICES/LICENSE_BINARY.txt).
 
 The <a name="http://opendmk.dev.java.net/download/index.html#BinaryComponents">binary components</a> are contained in self extracting jar files. To expand a self extracting jar file simply type
 

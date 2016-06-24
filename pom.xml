@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>net.java.opendmk</groupId>
+  <artifactId>opendmk-parent</artifactId>
+  <version>1.0-b02-SNAPSHOT</version>
+
+  <name>opendmk</name>
+  <packaging>pom</packaging>
+  <url>http://opendmk.java.net</url>
+  <inceptionYear>2007</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>Common Development and Distribution License</name>
+      <url>https://opendmk.java.net/legal_notices/LICENSE_CDDL.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/xtreemfs/opendmk</url>
+    <connection>git@github.com:xtreemfs/opendmk.git</connection>
+    <developerConnection>scm:git:https://github.com/xtreemfs/opendmk.git</developerConnection>
+  </scm>
+
+  <modules>
+    <module>jmxremote_optional</module>
+    <module>jdmkrt</module>
+    <module>jdmktk</module>
+  </modules>
+
+  <properties>
+    <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
+  </properties>
+</project>
