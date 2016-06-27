@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>net.java.opendmk</groupId>
+  <artifactId>jdmkrt</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-b02-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160627132725</lastUpdated>
+  </versioning>
+</metadata>
