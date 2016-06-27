@@ -90,6 +90,7 @@
           <outputDirectory>${project.build.directory}/xtreemfs-opendmk-repository</outputDirectory>
           <repositoryName>opendmk</repositoryName>
           <repositoryOwner>xtreemfs</repositoryOwner>
+          <merge>false</merge>
         </configuration>
         <executions>
           <execution>
