@@ -18,17 +18,17 @@ The SNAPSHOT build is available at this repository's [gh-pages](https://github.c
 
 <dependencies>
   <dependency>
-    <groupId>org.xtreemfs</groupId>
+    <groupId>org.xtreemfs.opendmk</groupId>
     <artifactId>jdmkrt</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
   </dependency>
   <dependency>
-    <groupId>org.xtreemfs</groupId>
+    <groupId>org.xtreemfs.opendmk</groupId>
     <artifactId>jdmktk</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
   </dependency>
   <dependency>
-    <groupId>org.xtreemfs</groupId>
+    <groupId>org.xtreemfs.opendmk</groupId>
     <artifactId>jmxremote_optional</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
   </dependency>
