@@ -15,6 +15,24 @@ The SNAPSHOT build is available at this repository's [gh-pages](https://github.c
     </snapshots>
   </repository>
 </repositories>
+
+<dependencies>
+  <dependency>
+    <groupId>org.xtreemfs</groupId>
+    <artifactId>jdmkrt</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+    <groupId>org.xtreemfs</groupId>
+    <artifactId>jdmktk</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+    <groupId>org.xtreemfs</groupId>
+    <artifactId>jmxremote_optional</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+</dependencies>
 ```
 
 OpenDMK comes with a dual license ([GPL](https://opendmk.java.net/legal_notices/LICENSE_GPL.txt) and [CDDL](https://opendmk.java.net/legal_notices/LICENSE_CDDL.txt)) and this project uses the same dual licensing scheme. This project uses OpenDMK's binary plug which comes with a seperate [binary license](https://opendmk.java.net/legal_notices/LICENSE_BINARY.txt).
