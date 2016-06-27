@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>net.java.opendmk</groupId>
-  <artifactId>jdmktk</artifactId>
+  <groupId>org.xtreemfs.opendmk</groupId>
+  <artifactId>jdmkrt</artifactId>
   <versioning>
     <versions>
       <version>1.0-b02-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160627132822</lastUpdated>
+    <lastUpdated>20160627143809</lastUpdated>
   </versioning>
 </metadata>

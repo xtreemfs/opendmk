@@ -3,21 +3,39 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>net.java.opendmk</groupId>
-    <artifactId>opendmk-jmxremote_optional</artifactId>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>opendmk-jdmkrt</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>jmxremote_optional</artifactId>
-  <name>jmxremote_optional</name>
+  <artifactId>jdmkrt</artifactId>
+  <name>jdmkrt</name>
 
   <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
-      <groupId>net.java.opendmk</groupId>
-      <artifactId>jmx_optional</artifactId>
+      <groupId>org.xtreemfs.opendmk</groupId>
+      <artifactId>core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.xtreemfs.opendmk</groupId>
+      <artifactId>core-rmic</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.xtreemfs.opendmk</groupId>
+      <artifactId>snmp_manager</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.xtreemfs.opendmk</groupId>
+      <artifactId>snmp_agent</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
@@ -42,6 +60,8 @@
                 <filter>
                   <artifact>*</artifact>
                   <excludes>
+                    <!-- We supply the license for the binary separately -->
+                    <exclude>META-INF/LICENSE_BINARY.txt</exclude>
                     <exclude>META-INF/maven/**</exclude>
                   </excludes>
                 </filter>
@@ -70,7 +90,7 @@
           <outputDirectory>${project.build.directory}/xtreemfs-opendmk-repository</outputDirectory>
           <repositoryName>opendmk</repositoryName>
           <repositoryOwner>xtreemfs</repositoryOwner>
-          <merge>true</merge>
+          <merge>false</merge>
         </configuration>
         <executions>
           <execution>
