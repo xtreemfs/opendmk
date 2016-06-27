@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>org.xtreemfs.opendmk</groupId>
-  <artifactId>opendmk-parent</artifactId>
+  <artifactId>opendmk-jmxremote_optional</artifactId>
   <version>1.0-b02-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20160627.153209</timestamp>
+      <timestamp>20160627.153215</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20160627153209</lastUpdated>
+    <lastUpdated>20160627153215</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-b02-20160627.153209-1</value>
-        <updated>20160627153209</updated>
+        <value>1.0-b02-20160627.153215-1</value>
+        <updated>20160627153215</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
