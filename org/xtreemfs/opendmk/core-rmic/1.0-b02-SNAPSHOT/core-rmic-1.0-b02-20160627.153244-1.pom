@@ -9,8 +9,16 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>core</artifactId>
-  <name>core</name>
+  <artifactId>core-rmic</artifactId>
+  <name>core-rmic</name>
 
   <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.xtreemfs.opendmk</groupId>
+      <artifactId>core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 </project>

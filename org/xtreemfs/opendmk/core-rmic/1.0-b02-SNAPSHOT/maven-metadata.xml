@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>org.xtreemfs.opendmk</groupId>
-  <artifactId>core</artifactId>
+  <artifactId>core-rmic</artifactId>
   <version>1.0-b02-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20160627.153239</timestamp>
+      <timestamp>20160627.153244</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20160627153239</lastUpdated>
+    <lastUpdated>20160627153244</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-b02-20160627.153239-1</value>
-        <updated>20160627153239</updated>
+        <value>1.0-b02-20160627.153244-1</value>
+        <updated>20160627153244</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-b02-20160627.153239-1</value>
-        <updated>20160627153239</updated>
+        <value>1.0-b02-20160627.153244-1</value>
+        <updated>20160627153244</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
