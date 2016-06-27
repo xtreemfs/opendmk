@@ -4,21 +4,13 @@
 
   <parent>
     <groupId>org.xtreemfs.opendmk</groupId>
-    <artifactId>opendmk-parent</artifactId>
+    <artifactId>opendmk-jdmkrt</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>opendmk-jdmkrt</artifactId>
-  <name>opendmk-jdmkrt</name>
+  <artifactId>core</artifactId>
+  <name>core</name>
 
-  <packaging>pom</packaging>
-
-  <modules>
-    <module>core</module>
-    <module>core-rmic</module>
-    <module>snmp_manager</module>
-    <module>snmp_agent</module>
-    <module>jdmkrt-dist</module>
-  </modules>
+  <packaging>jar</packaging>
 </project>
