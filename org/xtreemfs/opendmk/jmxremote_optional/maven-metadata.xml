@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.xtreemfs.opendmk</groupId>
+  <artifactId>jmxremote_optional</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-b02-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160627153729</lastUpdated>
+  </versioning>
+</metadata>
