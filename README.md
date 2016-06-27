@@ -36,3 +36,5 @@ The SNAPSHOT build is available at this repository's [gh-pages](https://github.c
 ```
 
 OpenDMK comes with a dual license ([GPL](https://opendmk.java.net/legal_notices/LICENSE_GPL.txt) and [CDDL](https://opendmk.java.net/legal_notices/LICENSE_CDDL.txt)) and this project uses the same dual licensing scheme. This project uses OpenDMK's binary plug which comes with a seperate [binary license](https://opendmk.java.net/legal_notices/LICENSE_BINARY.txt).
+
+[![Build Status](https://travis-ci.org/xtreemfs/opendmk.svg?branch=master)](https://travis-ci.org/xtreemfs/opendmk)
