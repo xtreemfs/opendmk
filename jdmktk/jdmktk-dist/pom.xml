@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>net.java.opendmk</groupId>
+    <groupId>org.xtreemfs.opendmk</groupId>
     <artifactId>opendmk-jdmktk</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
     <relativePath>..</relativePath>
@@ -16,7 +16,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>net.java.opendmk</groupId>
+      <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>toolkit</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -48,7 +48,7 @@
               </filters>
               <artifactSet>
                 <excludes>
-                  <exclude>net.java.opendmk:core</exclude>
+                  <exclude>org.xtreemfs.opendmk:core</exclude>
                 </excludes>
               </artifactSet>
               <transformers>
