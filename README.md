@@ -9,7 +9,7 @@ The SNAPSHOT build is available at this repository's [gh-pages](https://github.c
 <repositories>
   <repository>
     <id>xtreemfs-opendmk</id>
-    <url>https://raw.githubusercontent.com/xtreemfs/opendmk/gh-pages/</url>
+    <url>https://xtreemfs.github.io/opendmk</url>
     <snapshots>
       <enabled>true</enabled>
     </snapshots>
