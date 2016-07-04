@@ -29,13 +29,13 @@
 
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
-      <artifactId>snmp_manager</artifactId>
+      <artifactId>snmp_agent</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
-      <artifactId>snmp_agent</artifactId>
+      <artifactId>snmp_manager</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>

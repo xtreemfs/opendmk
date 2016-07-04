@@ -53,8 +53,8 @@
               </artifactSet>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
-                  <resource>com/sun/jdmk/tools/mibgen/mibgen.properties</resource>
                   <file>${basedir}/../toolkit/src/main/java/com/sun/jdmk/tools/mibgen/mibgen.properties.jdmk</file>
+                  <resource>com/sun/jdmk/tools/mibgen/mibgen.properties</resource>
                 </transformer>
               </transformers>
             </configuration>

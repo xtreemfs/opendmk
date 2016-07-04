@@ -24,6 +24,12 @@
   <dependencies>
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
+      <artifactId>binary-plug</artifactId>
+      <version>1.0-b02</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>core</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -32,12 +38,6 @@
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>snmp_manager</artifactId>
       <version>${project.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.xtreemfs.opendmk</groupId>
-      <artifactId>binary-plug</artifactId>
-      <version>1.0-b02</version>
     </dependency>
   </dependencies>
 </project>

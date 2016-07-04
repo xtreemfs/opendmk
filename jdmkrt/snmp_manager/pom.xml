@@ -24,14 +24,14 @@
   <dependencies>
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
-      <artifactId>core</artifactId>
-      <version>${project.version}</version>
+      <artifactId>binary-plug</artifactId>
+      <version>1.0-b02</version>
     </dependency>
 
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
-      <artifactId>binary-plug</artifactId>
-      <version>1.0-b02</version>
+      <artifactId>core</artifactId>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
 </project>
