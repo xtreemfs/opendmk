@@ -6,10 +6,16 @@ This project aims at providing `jdmkrt`, `jdmktk` and `jmxremote_optional` in a 
 The SNAPSHOT build is available at this repository's [gh-pages](https://github.com/xtreemfs/opendmk/tree/gh-pages) and can be used as follows:
 
 ```XML
+<!-- Consider putting the repositories under a profile in your settings.xml -->
 <repositories>
   <repository>
+    <id>central</id>
+    <url>http://repo.maven.apache.org/maven2</url>
+  </repository>
+  
+  <repository>
     <id>xtreemfs-opendmk</id>
-    <url>https://raw.githubusercontent.com/xtreemfs/opendmk/gh-pages/</url>
+    <url>https://xtreemfs.github.io/opendmk</url>
     <snapshots>
       <enabled>true</enabled>
     </snapshots>
@@ -22,16 +28,62 @@ The SNAPSHOT build is available at this repository's [gh-pages](https://github.c
     <artifactId>jdmkrt</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
   </dependency>
+  <!-- jdmkrt bundles the following artifacts -->
+  <!--
+  <dependency>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>core</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>core-rmic</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>snmp_manager</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>snmp_agent</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>binary-plug</artifactId>
+    <version>1.0-b02</version>
+  </dependency>
+  -->
+  
   <dependency>
     <groupId>org.xtreemfs.opendmk</groupId>
     <artifactId>jdmktk</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
   </dependency>
+  <!-- jdmktk bundles the following artifact -->
+  <!--
+  <dependency>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>toolkit</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  -->
+  
   <dependency>
     <groupId>org.xtreemfs.opendmk</groupId>
     <artifactId>jmxremote_optional</artifactId>
     <version>1.0-b02-SNAPSHOT</version>
   </dependency>
+  <!-- jmxremote_optional bundles the following artifact -->
+  <!--
+  <dependency>
+    <groupId>org.xtreemfs.opendmk</groupId>
+    <artifactId>jmx_optional</artifactId>
+    <version>1.0-b02-SNAPSHOT</version>
+  </dependency>
+  -->
 </dependencies>
 ```
 
