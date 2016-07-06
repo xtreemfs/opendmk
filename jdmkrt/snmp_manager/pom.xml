@@ -14,18 +14,11 @@
 
   <packaging>jar</packaging>
 
-  <repositories>
-    <repository>
-      <id>opendmk-repository</id>
-      <url>file://${basedir}/../../opendmk-repository</url>
-    </repository>
-  </repositories>
-
   <dependencies>
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>binary-plug</artifactId>
-      <version>1.0-b02</version>
+      <version>${project.version}</version>
     </dependency>
 
     <dependency>

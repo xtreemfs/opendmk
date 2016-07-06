@@ -15,6 +15,7 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>binary-plug</module>
     <module>core</module>
     <module>core-rmic</module>
     <module>snmp_manager</module>
