@@ -18,19 +18,21 @@ In your `$HOME/.m2/settings.xml` add:
         <repository>
           <id>central</id>
           <url>http://repo.maven.apache.org/maven2</url>
-      </repository>
+        </repository>
   
-      <repository>
-        <id>xtreemfs-opendmk</id>
-        <url>https://xtreemfs.github.io/opendmk</url>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </repository>
-    </repositories>
-  </profile>
+        <repository>
+          <id>xtreemfs-opendmk</id>
+          <url>https://xtreemfs.github.io/opendmk</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
   
   <!-- more profiles -->
+
+  </profiles>
 
 </settings>
 ````
