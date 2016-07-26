@@ -33,7 +33,6 @@ In your `$HOME/.m2/settings.xml` add:
   <!-- more profiles -->
 
   </profiles>
-
 </settings>
 ````
 
