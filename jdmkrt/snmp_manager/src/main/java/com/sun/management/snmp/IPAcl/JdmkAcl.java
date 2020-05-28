@@ -4,19 +4,19 @@
  * @(#)version   4.41
  * @(#)date      07/10/01
  *
- * 
+ *
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
- * 
+ *
  * Copyright (c) 2007 Sun Microsystems, Inc. All Rights Reserved.
- * 
+ *
  * The contents of this file are subject to the terms of either the GNU General
  * Public License Version 2 only ("GPL") or the Common Development and
  * Distribution License("CDDL")(collectively, the "License"). You may not use
  * this file except in compliance with the License. You can obtain a copy of the
- * License at http://opendmk.dev.java.net/legal_notices/licenses.txt or in the 
- * LEGAL_NOTICES folder that accompanied this code. See the License for the 
+ * License at http://opendmk.dev.java.net/legal_notices/licenses.txt or in the
+ * LEGAL_NOTICES folder that accompanied this code. See the License for the
  * specific language governing permissions and limitations under the License.
- * 
+ *
  * When distributing the software, include this License Header Notice in each
  * file and include the License file found at
  *     http://opendmk.dev.java.net/legal_notices/licenses.txt
@@ -24,27 +24,27 @@
  * Sun designates this particular file as subject to the "Classpath" exception
  * as provided by Sun in the GPL Version 2 section of the License file that
  * accompanied this code.
- * 
+ *
  * If applicable, add the following below the License Header, with the fields
  * enclosed by brackets [] replaced by your own identifying information:
- * 
+ *
  *       "Portions Copyrighted [year] [name of copyright owner]"
- * 
+ *
  * Contributor(s):
- * 
+ *
  * If you wish your version of this file to be governed by only the CDDL or
  * only the GPL Version 2, indicate your decision by adding
- * 
+ *
  *       "[Contributor] elects to include this software in this distribution
  *        under the [CDDL or GPL Version 2] license."
- * 
+ *
  * If you don't indicate a single choice of license, a recipient has the option
  * to distribute your version of this file under either the CDDL or the GPL
  * Version 2, or to extend the choice of license to its licensees as provided
  * above. However, if you add GPL Version 2 code and therefore, elected the
  * GPL Version 2 license, then the option applies only if the new code is made
  * subject to such option by the copyright holder.
- * 
+ *
  *
  */
 
@@ -65,8 +65,8 @@ import java.util.Hashtable;
 import java.util.Vector;
 import java.util.Enumeration;
 import java.util.HashSet;
-import java.security.acl.AclEntry; 
-import java.security.acl.NotOwnerException; 
+import com.sun.jdmk.security.acl.AclEntry;
+import com.sun.jdmk.security.acl.NotOwnerException;
 
 // jdmk import
 //
@@ -95,10 +95,10 @@ import com.sun.jdmk.defaults.Utils;
 
 public class JdmkAcl implements InetAddressAcl, Serializable {
     private static final long serialVersionUID = -1731776149894734768L;
-  
-    static final PermissionImpl READ  = new PermissionImpl("READ"); 
+
+    static final PermissionImpl READ  = new PermissionImpl("READ");
     static final PermissionImpl WRITE = new PermissionImpl("WRITE");
-  
+
     /**
      * Constructs the Java Dynamic Management(TM) Access Control List
      * based on IP addresses.  The ACL will take the given owner name.
@@ -112,10 +112,10 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
      * @exception IllegalArgumentException If the ACL file doesn't exist.
      */
     public JdmkAcl(String name, String fileName)
-	throws UnknownHostException, IllegalArgumentException {   
+	throws UnknownHostException, IllegalArgumentException {
 	trapDestList= new Hashtable();
         informDestList= new Hashtable();
-        
+
         // PrincipalImpl() take the current host as entry
         owner = new PrincipalImpl();
         try {
@@ -130,12 +130,12 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
 		      "the owner is built in this constructor");
             }
         }
-	
+
 	if(fileName == null)
 	    setDefautFileName();
 	else
 	    authorizedListFile = fileName;
-	
+
 	readAuthorisedListFile();
     }
 
@@ -146,27 +146,27 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
      *
      * @param name The name of the ACL.
      *
-     * @exception UnknownHostException If the local host is unknown. 
-     * Thrown only if this class is instantiated internally by 
+     * @exception UnknownHostException If the local host is unknown.
+     * Thrown only if this class is instantiated internally by
      * <CODE> SnmpAdaptorServer </CODE> or <CODE> SnmpV3AdaptorServer </CODE>.
-     * 
+     *
      * @exception IllegalArgumentException If the ACL file doesn't exist.
      */
     public JdmkAcl(String name)
-	throws UnknownHostException, IllegalArgumentException {   
+	throws UnknownHostException, IllegalArgumentException {
         this(name, null);
     }
-  
+
     /**
      * Returns an enumeration of the entries in this ACL. Each element in the
-     * enumeration is of type <CODE>java.security.acl.AclEntry</CODE>.
+     * enumeration is of type <CODE>com.sun.jdmk.security.acl.AclEntry</CODE>.
      *
      * @return An enumeration of the entries in this ACL.
      */
     public synchronized Enumeration entries() {
         return acl.entries();
     }
-  
+
     /**
      * Returns an enumeration of community strings. Community strings are returned as String.
      * @return The enumeration of community strings.
@@ -176,7 +176,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
 	Vector res = new Vector();
 	for (Enumeration e = acl.entries() ; e.hasMoreElements() ;) {
 	    AclEntryImpl entry = (AclEntryImpl) e.nextElement();
-	    for (Enumeration cs = entry.communities(); 
+	    for (Enumeration cs = entry.communities();
 		 cs.hasMoreElements() ;) {
 		set.add((String) cs.nextElement());
 	    }
@@ -196,7 +196,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
     public synchronized String getName() {
         return acl.getName();
     }
-  
+
     /**
      * Returns the read permission instance used.
      *
@@ -205,7 +205,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
     static public PermissionImpl getREAD() {
         return READ;
     }
-  
+
     /**
      * Returns the write permission instance used.
      *
@@ -214,7 +214,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
     static public PermissionImpl getWRITE() {
         return WRITE;
     }
-  
+
     /**
      * Sets the full path of the file containing the ACL information.
      * Setting a file makes the previous loaded ACL configuration to be cleared.
@@ -225,12 +225,12 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
      * @exception NotOwnerException This exception is never thrown.
      * @exception UnknownHostException If IP addresses for hosts contained in the ACL file couldn't be found.
      */
-    public synchronized void setAuthorizedListFile(String filename) 
-	throws IllegalArgumentException, 
+    public synchronized void setAuthorizedListFile(String filename)
+	throws IllegalArgumentException,
 	       NotOwnerException, UnknownHostException {
 	if(filename == null)
 	    throw new IllegalArgumentException("The specified file is null");
-	
+
 	File file = new File(filename);
 	if (!file.isFile() ) {
 	    if (logger.finestOn()) {
@@ -245,14 +245,14 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
 
 	rereadTheFile();
     }
-  
+
     /**
      * Resets this ACL to the values contained in the configuration file.
      *
      * @exception NotOwnerException If the principal attempting the reset is not an owner of this ACL.
      * @exception UnknownHostException If IP addresses for hosts contained in the ACL file couldn't be found.
      */
-    public synchronized void rereadTheFile() 
+    public synchronized void rereadTheFile()
 	throws NotOwnerException, UnknownHostException {
         alwaysAuthorized = false;
         acl.removeAll(owner);
@@ -260,11 +260,11 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
         informDestList.clear();
         AclEntry ownEntry = new AclEntryImpl(owner);
         ownEntry.addPermission(READ);
-        ownEntry.addPermission(WRITE);  
+        ownEntry.addPermission(WRITE);
         acl.addEntry(owner,ownEntry);
         readAuthorisedListFile();
     }
-  
+
     /**
      * Returns the full path of the file used to get ACL information.
      *
@@ -273,7 +273,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
     public synchronized String getAuthorizedListFile() {
         return authorizedListFile;
     }
-  
+
     /**
      * Checks whether or not the specified host has <CODE>READ</CODE> access.
      *
@@ -286,7 +286,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
         PrincipalImpl p = new PrincipalImpl(address);
         return acl.checkPermission(p, READ);
     }
-  
+
     /**
      * Checks whether or not the specified host and community have <CODE>READ</CODE> access.
      *
@@ -295,13 +295,13 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
      *
      * @return <CODE>true</CODE> if the pair (host, community) has read permission, <CODE>false</CODE> otherwise.
      */
-    public synchronized boolean checkReadPermission(InetAddress address, 
+    public synchronized boolean checkReadPermission(InetAddress address,
 						    String community) {
         if (alwaysAuthorized) return ( true );
         PrincipalImpl p = new PrincipalImpl(address);
         return acl.checkPermission(p, community, READ);
     }
-  
+
     /**
      * Checks whether or not a community string is defined.
      *
@@ -312,7 +312,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
     public synchronized boolean checkCommunity(String community) {
         return acl.checkCommunity(community);
     }
-  
+
     /**
      * Checks whether or not the specified host has <CODE>WRITE</CODE> access.
      *
@@ -324,7 +324,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
         if (alwaysAuthorized) return ( true );
         PrincipalImpl p = new PrincipalImpl(address);
         return acl.checkPermission(p, WRITE);
-    } 
+    }
 
     /**
      * Checks whether or not the specified host and community have <CODE>WRITE</CODE> access.
@@ -334,13 +334,13 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
      *
      * @return <CODE>true</CODE> if the pair (host, community) has write permission, <CODE>false</CODE> otherwise.
      */
-    public synchronized boolean checkWritePermission(InetAddress address, 
+    public synchronized boolean checkWritePermission(InetAddress address,
 						     String community) {
         if (alwaysAuthorized) return ( true );
         PrincipalImpl p = new PrincipalImpl(address);
         return acl.checkPermission(p, community, WRITE);
-    } 
-  
+    }
+
     /**
      * Returns an enumeration of trap destinations.
      *
@@ -349,7 +349,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
     public synchronized Enumeration getTrapDestinations() {
         return trapDestList.keys();
     }
-  
+
     /**
      * Returns an enumeration of trap communities for a given host.
      *
@@ -370,9 +370,9 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
                 logger.finer("getTrapCommunities", "["+i.toString()+"] is not in list");
             }
             return list.elements();
-        } 
+        }
     }
-  
+
     /**
      * Returns an enumeration of inform destinations.
      *
@@ -381,7 +381,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
     public synchronized Enumeration getInformDestinations() {
         return informDestList.keys();
     }
-  
+
     /**
      * Returns an enumeration of inform communities for a given host.
      *
@@ -402,11 +402,11 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
                 logger.finer("getInformCommunities", "["+i.toString()+"] is not in list");
             }
             return list.elements();
-        } 
+        }
     }
-  
+
     /**
-     * Fix for 6305089 and 6238234. Non readable file make ACL to throw 
+     * Fix for 6305089 and 6238234. Non readable file make ACL to throw
      * an exception.
      */
     private static void checkCanRead(String f) throws IllegalArgumentException {
@@ -415,7 +415,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
             throw new IllegalArgumentException("IP ACL file is not " +
                     "readable.");
     }
-    
+
     /**
      * Converts the input configuration file into ACL.
      */
@@ -430,7 +430,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
             alwaysAuthorized = true ;
         } else {
             // Read the file content
-            Parser parser = null;  
+            Parser parser = null;
             try {
                 checkCanRead(getAuthorizedListFile());
                 parser= new Parser(new FileInputStream(getAuthorizedListFile()));
@@ -441,7 +441,7 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
                 alwaysAuthorized = true ;
                 return;
             }
-          
+
             try {
                 JDMSecurityDefs n = parser.SecurityDefs();
                 n.buildAclEntries(owner, acl);
@@ -449,31 +449,31 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
                 n.buildInformEntries(informDestList);
             } catch (ParseException e) {
                 if (logger.finestOn()) {
-                    logger.finest("readAuthorisedListFile", 
+                    logger.finest("readAuthorisedListFile",
 				  "Parsing exception " + e);
                 }
-		final IllegalArgumentException iae = 
+		final IllegalArgumentException iae =
 		    new IllegalArgumentException("Syntax error: " + e);
 		Utils.initCause(iae,e);
 		throw iae;
             } catch (Error err) {
                 if (logger.finestOn()) {
-                    logger.finest("readAuthorisedListFile", 
+                    logger.finest("readAuthorisedListFile",
 				  "Error exception " + err);
                 }
-		final IllegalArgumentException iae = 
+		final IllegalArgumentException iae =
 		    new IllegalArgumentException("Error: " + err);
 		Utils.initCause(iae,err);
 		throw iae;
             }
-          
+
             for(Enumeration e = acl.entries(); e.hasMoreElements();) {
                 AclEntryImpl aa = (AclEntryImpl) e.nextElement();
                 if (logger.finerOn()) {
                     logger.finer("readAuthorisedListFile", "===> " + aa.getPrincipal().toString());
                 }
                 for (Enumeration eee = aa.permissions();eee.hasMoreElements();) {
-                    java.security.acl.Permission perm = (java.security.acl.Permission)eee.nextElement();
+                    com.sun.jdmk.security.acl.Permission perm = (com.sun.jdmk.security.acl.Permission)eee.nextElement();
                     if (logger.finerOn()) {
                         logger.finer("readAuthorisedListFile", "perm = " + perm);
                     }
@@ -481,23 +481,23 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
             }
         }
     }
-  
+
     /**
      * Set the default full path for "jdmk.acl" input file.
      */
     private void setDefautFileName() throws IllegalArgumentException {
-	String aclFile = null;	
+	String aclFile = null;
 	File file = null;
-	
+
         if ((aclFile = (String) System.getProperty(JdmkProperties.ACL_FILE)) == null) {
             aclFile = DefaultPaths.getEtcDir("conf" + File.separator + "jdmk.acl");
 	    if (logger.finestOn())
-		logger.finest("setDefautFileName", 
+		logger.finest("setDefautFileName",
 		      "Default File name is : " + aclFile);
 	    file = new File(aclFile);
 	    if (file.isFile()) {
 		if (logger.finerOn()) {
-		    logger.finer("setDefautFileName", 
+		    logger.finer("setDefautFileName",
 			  "Default Ip ACL file found : " + aclFile);
 		}
 	    } else {
@@ -521,19 +521,19 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
 	}
         authorizedListFile = aclFile;
     }
-  
-    
+
+
     // Logging
     //--------
-    
-    private static final ClassLogger logger = 
+
+    private static final ClassLogger logger =
 	new ClassLogger(ClassLogger.LOGGER_SNMP,"JdmkAcl");
-    
+
     String dbgTag = "JdmkAcl";
-    
+
     // PRIVATE VARIABLES
     //------------------
-    
+
     /**
      * Represents the Access Control List.
      */
@@ -555,6 +555,6 @@ public class JdmkAcl implements InetAddressAcl, Serializable {
      * Contains the hosts list for inform destination.
      */
     private Hashtable informDestList = null;
-    
+
     private PrincipalImpl owner = null;
 }

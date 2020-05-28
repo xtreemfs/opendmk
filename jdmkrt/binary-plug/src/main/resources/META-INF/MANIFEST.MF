@@ -10,6 +10,6 @@ Specification-Title: Java(TM) Dynamic Management Kit
 Specification-Version: 5.1
 Specification-Vendor: Sun Microsystems, Inc.
 Implementation-Title: Project OpenDMK, Binary Blugs
-Implementation-Version: opendmk-1.0-b02 2007.10.01_19:17:46_MEST
+Implementation-Version: opendmk-1.0-b03 2020.05.28_19:17:46_MEST
 Implementation-Vendor: Sun Microsystems, Inc
 

@@ -1,7 +1,7 @@
-XtreemFS OpenDMK 1.0-b02-SNAPSHOT Build
+XtreemFS OpenDMK 1.0-b03-SNAPSHOT Build
 =======================================
 
-This project aims at providing `jdmkrt`, `jdmktk` and `jmxremote_optional` in a Maven structure. It is built from the 1.0-b02 Sources of [OpenDMK](https://opendmk.java.net/) using Maven 3.1.1 and Oracle JDK 1.5.0_13-b05, because the [binary plug](https://opendmk.java.net/download/index.html#BinaryComponents) (which this project uses) is built using this version as well.
+This project aims at providing `jdmkrt`, `jdmktk` and `jmxremote_optional` in a Maven structure. It is built from the 1.0-b03 Sources of [OpenDMK](https://opendmk.java.net/) using Maven 3.6.3 and Open JDK 14.0.1 with 1.8 bytecode.
 
 The SNAPSHOT build is available at this repository's [gh-pages](https://github.com/xtreemfs/opendmk/tree/gh-pages) and can be used as follows:
 
@@ -46,62 +46,62 @@ In your `pom.xml` add:
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>jdmkrt</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     <!-- jdmkrt bundles the following artifacts -->
     <!--
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>core</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>core-rmic</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>snmp_manager</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>snmp_agent</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>binary-plug</artifactId>
-      <version>1.0-b02</version>
+      <version>1.0-b03</version>
     </dependency>
     -->
     
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>jdmktk</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     <!-- jdmktk bundles the following artifact -->
     <!--
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>toolkit</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     -->
     
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>jmxremote_optional</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     <!-- jmxremote_optional bundles the following artifact -->
     <!--
     <dependency>
       <groupId>org.xtreemfs.opendmk</groupId>
       <artifactId>jmx_optional</artifactId>
-      <version>1.0-b02-SNAPSHOT</version>
+      <version>1.0-b03-SNAPSHOT</version>
     </dependency>
     -->
   </dependencies>
