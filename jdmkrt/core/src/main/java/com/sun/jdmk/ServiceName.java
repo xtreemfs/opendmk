@@ -188,14 +188,14 @@ public class ServiceName {
       * The build number of the current product version, of the form
       * <CODE>bXX</CODE>.
       */
-    public static final String BUILD_NUMBER = "b03";
+    public static final String BUILD_NUMBER = "b02";
 
     /**
      * The version of this product implementing the  JMX specification.
      * <BR>
-     * The value is <CODE>opendmk-1.0-bXX</CODE>, where <CODE>bXX</CODE> is the
+     * The value is <CODE>opendmk-1.1-bXX</CODE>, where <CODE>bXX</CODE> is the
      * <CODE>BUILD_NUMBER</CODE> .
      */
-    public static final String JMX_IMPL_VERSION = "opendmk-1.0-" + BUILD_NUMBER;
+    public static final String JMX_IMPL_VERSION = "opendmk-1.1-" + BUILD_NUMBER;
 
 }
