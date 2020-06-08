@@ -1,9 +1,9 @@
-XtreemFS OpenDMK 1.0-b02-SNAPSHOT Build
+XtreemFS OpenDMK 1.1-b02-SNAPSHOT Build
 =======================================
 
-This project aims at providing `jdmkrt`, `jdmktk` and `jmxremote_optional` in a Maven structure. It is built from the 1.0-b02 Sources of [OpenDMK](https://opendmk.java.net/) using Maven 3.1.1 and Oracle JDK 1.5.0_13-b05, because the [binary plug](https://opendmk.java.net/download/index.html#BinaryComponents) (which this project uses) is built using this version as well.
+This project aims at providing `jdmkrt`, `jdmktk` and `jmxremote_optional` in a Maven structure. It is built from the 1.0-b02 Sources of [OpenDMK](https://opendmk.java.net/) using Maven and Open JDK 14.0.1 with 1.8 bytecode.
 
-The SNAPSHOT build is available at this repository's [gh-pages](https://github.com/xtreemfs/opendmk/tree/gh-pages) and can be used as follows:
+~~The SNAPSHOT build is available at this repository's [gh-pages](https://github.com/xtreemfs/opendmk/tree/gh-pages) and can be used as follows:~~
 
 In your `$HOME/.m2/settings.xml` add:
 ```XML

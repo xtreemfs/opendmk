@@ -5,12 +5,20 @@
   <parent>
     <groupId>org.xtreemfs.opendmk</groupId>
     <artifactId>opendmk-jmxremote_optional</artifactId>
-    <version>1.0-b02-SNAPSHOT</version>
+    <version>1.1-b02-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
   <artifactId>jmx_optional</artifactId>
   <name>jmx_optional</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.ow2.jonas.osgi</groupId>
+      <artifactId>corba-api</artifactId>
+      <version>5.0.1</version>
+    </dependency>
+  </dependencies>
 
   <packaging>jar</packaging>
 </project>
