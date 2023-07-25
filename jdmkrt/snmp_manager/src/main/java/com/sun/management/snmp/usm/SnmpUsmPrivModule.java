@@ -171,6 +171,11 @@ class SnmpUsmPrivModule {
 	    SnmpEncryptionPair pair = new SnmpEncryptionPair();
 	    pair.encryptedData = encryptedData;
 	    pair.parameters = params.getPrivParameters();
+	    
+	    //Required to support AES Algorithm as per RFC 3826 to calculate IV
+	    pair.authoritativeEngineBoots = params.getAuthoritativeEngineBoots();
+	    pair.authoritativeEngineTime = params.getAuthoritativeEngineTime();
+	    
 	    //Ask the algo to decrypt.
 	    byte []data = privPair.algo.decrypt(privPair.key, 
 						pair);
