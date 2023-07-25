@@ -62,4 +62,8 @@ public class SnmpEncryptionPair {
      * Encryption parameters. 
      */
     public byte[] parameters = null;
+    
+    public int authoritativeEngineBoots;
+
+    public int authoritativeEngineTime;
 }
